@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+    <script>
+
+        function value()
+        {
+            var to = document.querySelector("#to").value;
+            var from = document.querySelector("#from").value;
+            var men = document.querySelector("#pepole").value;
+            var price = document.querySelector("#price").value;
+            var date = document.querySelector("#date").value;
+            var op = document.querySelector("#op12").value;
+
+            document.querySelector("#adult").textContent = men  + " Adult Tickets";
+            document.querySelector("#men").textContent = men ;
+            document.querySelector("#price1").textContent = "₹" + price; 
+            document.querySelector("#date1").textContent = date; 
+            document.querySelector(".to1").textContent = from;
+            document.querySelector(".from1").textContent = to;
+            document.querySelector("#op2").textContent = op;
+
+            
+            var box = document.querySelector(".tikeets");
+            box.style.display = "block";
+            var box1 = document.querySelector(".bookig");
+            box1.style.display = "none";
+
+        }
+
+        function back()
+        {
+            var box = document.querySelector(".tikeets");
+            box.style.display = "none";
+            var box1 = document.querySelector(".bookig");
+            box1.style.display = "block";
+        }
+    </script>
+</head>
+<body>
+    
+<!-- START INPUT BY USER  -->
+
+    <div class="bookig">
+        <div class="textcontent">
+            <h1 align="center">Free Book Tiket BRTS</h1>
+            <form action="">
+                <label for="">To</label>
+                <input type="text" id="to">
+                <label for="">From</label>
+                <input type="text" id="from">
+                <label for="">Pepole</label>
+                <input type="number" id="pepole">
+                <label for="">Price</label>
+                <input type="Number" id="price">
+                <label for="">Next Bus Stop Name</label>
+                <input type="text" id="op12">
+                <label for="">Date</label>
+                <input type="text" id="date" value="11 Nov 2023, 08:38 PM">
+            </form>   
+            <center>
+                <div class="button" onclick="value()">Submit</div> 
+                <div style="color: rgba(0, 0, 0, 0.74);">Created By :- Om Bharsakle</div>
+            </center>  
+        </div>
+    </div>
+   
+<!-- END INPUT BY USER  -->
+
+<!-- START GENERATE BY TIKET USER INPUT DETAILES -->
+
+<div class="tikeets">
+    <div id="main_content1">
+        <div class="main">
+            <div class="logo"><i class="fa-solid fa-arrow-left" onclick="back()"></i></div>
+            <div class="arow"><img class="paytm" src="Material/logo.png" alt=""></div>
+            <div class="help">Help</div>
+        </div>
+        <div class="main1">
+            <div class="logo1"><img  class="logo2" src="Material/sity.jpg" height="400px"  width="400px"></div>
+            <div class="ways">
+                <div class="from1" id="from">Parvat Gam</div>
+                <i class="fa-solid fa-arrow-right"></i>
+                <div class="to1">Devadh Gam</div>
+            </div>
+            <div class="adult" id="adult">3 Adult Tickets</div>
+            <div class="pepole">
+                <img class="men" src="Material/men.png">
+                <p id="men">1</p>
+            </div>
+            <div class="paid">
+                <div class="ru" id="price1">&#8377;12&nbsp; </div>
+                <img class="paid1" src="Material/paid.png" alt="">
+            </div>
+            <div class="book">TICKET BOOKED SUCCESSFULLY</div>
+            <div class="time" id="date1">11 Nov 2023, 08:38 PM</div>
+            <div class="line"></div>
+            <div class="timer">
+                <div class="valid">
+                    Your ticket is valid for
+                </div>
+                <div class="timer1">
+                    <div class="timer2">
+                        <div class="dot">
+                            <div class="hr" id="hours"></div>
+                            <p>:</p>
+                        </div>
+                    <div class="line">HOURS</div>
+                    </div>
+                    <div class="timer2">
+                        <div class="dot1">
+                            <div class="hr" id="minutes"></div>
+                            <p>:</p>
+                        </div>
+                    <div class="line">MINUTES</div>
+                    </div>
+                    <div class="timer2">
+                    <div class="hr" id="seconds"></div>
+                    <div class="line">SECONDS</div>
+                    </div>
+                </div>
+                <div class="button">View your Tickets</div>
+            </div>
+        </div>
+        <div class="trip">
+            <div class="heading">
+                <h4>Trip Details</h4>
+            </div>
+            <div class="op">
+                <div class="op1">OPERATOR</div>
+                <div class="op2">Surat Sitilink</div>
+            </div>
+            <div class="cobs">
+                <div class="op1">CHANGE OVER BUS STOP</div>
+                <div class="op2" id="op2">Jai Jogani Mata Chowk Brts</div>
+            </div>
+            <div class="hl"><hr style="border: 1px dashed #d1d0d0;"></div>
+            <div class="cobs">
+                <div class="op3">Order ID: 22385674379</div>
+                <div class="op4">For any queries regarding QR Ticket, please contact Surat Sitilink with Order Id.</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- END GENERATE BY TIKET USER INPUT DETAILES -->
+
+    <script src="java.js"></script>
+</body>
+</html>
